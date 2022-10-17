@@ -16,8 +16,6 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.1.RELEASE'
     implementation 'com.github.joebrrr:Software-Engineering:5e20af8594'
-
-
 }
 
 test {

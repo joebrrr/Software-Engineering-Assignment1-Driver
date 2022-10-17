@@ -4,17 +4,21 @@ import java.util.ArrayList;
 
 public class DriverClass {
     public static void main(String[] args) {
+
+        //create courses and add them to a list
         CourseProgramme BCT = new CourseProgramme("Computer Science", LocalDate.parse("2022-08-15"), LocalDate.parse("2023-05-15"));
         CourseProgramme commerce = new CourseProgramme("Commerce", LocalDate.parse("2022-08-15"), LocalDate.parse("2023-05-15"));
         ArrayList<CourseProgramme> courses = new ArrayList<CourseProgramme>();
         courses.add(BCT);
         courses.add(commerce);
 
+        //create lecturers
         Lecturer barryMulhern = new Lecturer(4815, "Barry Mulhern", 27, LocalDate.parse("1980-10-27"));
         Lecturer alexJones = new Lecturer(4815, "Alex Jones", 27, LocalDate.parse("1980-10-27"));
         Lecturer jimMcGuinness = new Lecturer(4815, "Jim McGuinness", 27, LocalDate.parse("1980-10-27"));
         Lecturer maryBerry = new Lecturer(4815, "Mary Berry", 27, LocalDate.parse("1980-10-27"));
 
+        //create modules with corresponding lecturers and add them to courses
         Module disMath = new Module("Discrete Mathematics", 3456, barryMulhern);
         BCT.addModule(disMath);
         commerce.addModule(disMath);
@@ -27,7 +31,7 @@ public class DriverClass {
         Module microEc = new Module("Micro Economics", 84513, maryBerry);
         commerce.addModule(microEc);
 
-        //init some students
+        //init some students with corresponding courses
         Student student1 = new Student("Alex",20, 51545, LocalDate.parse("2002-05-23"), BCT);
         Student student2 = new Student("Jason",24, 5674, LocalDate.parse("1998-09-23"), BCT);
         Student student3 = new Student("Paul",22, 9987, LocalDate.parse("1999-12-31"), commerce);
@@ -35,6 +39,7 @@ public class DriverClass {
         Student student5 = new Student("Alan",22, 9987, LocalDate.parse("1999-12-31"), BCT);
         Student student6 = new Student("Laura", 22, 9987, LocalDate.parse("1999-12-31"), commerce);
 
+        //print out the list of courses
         for(CourseProgramme course: courses) {
             System.out.println(course);
         }
